@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Josefin+Sans:wght@500&family=Playfair+Display&display=swap');
+
+
+
+p#alphabet, span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    margin: 5px;
+    color: white;
+}
+
+p#underscore {
+    margin-bottom: 0px;
+}
+
+ /*div#main {
+    margin: auto;
+    width: 300px;
+    height:300px;
+    padding: 10px;
+}
+
+p {
+    font-family: 'Inspiration', cursive;
+    font-weight: 600;
+    font-size: 50px;
+    margin: 5px;
+    color: white;
+}
+
+
+
+p#link {
+    font-size: 80px;
+}
+
+ {
+    font-family: 'Playfair Display', serif;
+    font-size:40px;
+}
+
+p#alphabet {
+    font-family: 'Playfair Display', serif;
+    font-size:30px;
+    color: white;
+    height:40px;
+    width:415px;
+    margin:auto;
+    margin-bottom:5px;
+}
+}*/
+
+div#begin {
+    margin: auto;
+    width: 300px;
+    height:300px;
+    text-align: center;
+    padding: 50px;
+}
+
+div#game {
+    display: none;
+}
+
+ /* button {
+	box-shadow: -7px 4px 17px -8px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:19px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:10px 9px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #854629;
+}
+button:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+button:active {
+	position:relative;
+	top:1px;
+}*/
+
+#imge2 {
+    display: none;
+    margin: auto;
+}
+
+div#div {
+    height:155px;
+    width:340px;
+    margin: auto;
+}
+
+#share {
+    display:none;
+    text-decoration: none;
+    color:white;
+}

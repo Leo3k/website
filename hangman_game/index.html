@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Josefin+Sans:wght@500&family=Playfair+Display&display=swap');
+
+        body, ul, li, p {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-size: 1.2rem;
+            font-family: Arial; 
+            overflow: visible;
+            text-align: center;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        a {
+            text-decoration: none;
+            color:#ffd11a;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: 5px;
+        }
+
+        img:hover {
+            border: solid #000d1a;
+        }
+
+        .header {
+            background-color:#000d1a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        footer {
+            background-color:#000d1a;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            color:white;
+            padding: 20px;
+            margin-top:195px;
+            margin-bottom:0px;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu li {
+            margin-left: 10px;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+        }
+
+        .menu li a:hover {
+            color:white;
+        }
+
+        #btn-mobile {
+            display: none;
+            color: #ffd11a;
+        }
+
+        #btn-mobile:hover {
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                overflow: visible;
+            }
+
+            footer {
+                margin:auto;
+            }
+
+            .menu {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 70px;
+                right: 0px;
+                background-color: #000d1a; 
+                height: 0px;
+                transition: .6s;
+                z-index: 1000; 
+                visibility: hidden; 
+                overflow-y: hidden;
+            }
+            #nav.active .menu {
+                height: calc(100vh - 70px);  
+                visibility: visible;
+                overflow-y: auto;
+            }
+            .menu a {
+                padding: 1rem 0;
+                margin: 0 1rem;
+                border-bottom: 2px solid #ffd11a;
+            }
+            #btn-mobile {
+                display: flex;
+                padding: .5rem 1rem;
+                font-size: 1rem;
+                border: none;
+                background: none;
+                cursor: pointer;
+                gap: .5rem;
+            }
+            #burger {
+                color: #ffd11a;
+                width: 20px;
+                border-top: 2px solid;
+            }
+            #burger::after, #burger::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height:2px;
+                background: currentColor;
+                margin-top: 5px;
+                transition: .3s;
+                position: relative;
+            }
+            #nav.active #burger {
+                border-top-color: transparent;                
+            }
+            #nav.active #burger:before {
+                transform: rotate(135deg);
+            }
+            #nav.active #burger:after {
+                transform: rotate(-135deg);
+                top: -7px;
+            }
+        }
+
+        /* CSS Flexbox */
+
+        .flex {
+            display:flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .flex > div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        #h1_forca {
+            color:#000d1a;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size:30px;
+        }
+
+        .options {
+            color:#000d1a;
+        }
+        
+        #logo {
+            font-family: 'Josefin Sans', sans-serif;
+            font-size:60px;
+            margin-top:10px;
+        }
+
+        #logo:hover {
+            color:white;
+        }
+        
+        #slogan {
+            display:block;
+            color:#ffd11a;
+            background:#000d1a;
+            width:350px;
+            margin:auto;
+            padding:10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+        document.getElementById("my_audio").play();
+}
+    </script>
+    <audio id="my_audio" src="soundtrack.mp3" loop="loop"></audio> 
+    <!-- Extreme Trap Racing Music | Power by Alex-Productions | https://www.youtube.com/channel/UCx0_M61F81Nfb-BRXE-SeVA
+    Music promoted by https://www.chosic.com/free-music/all/
+    Creative Commons CC BY 3.0
+    https://creativecommons.org/licenses/by/3.0/ -->
+    <header class="header">
+        <a id="logo" href="http://inglesnumclick.com.br/portal/hangman_game/">PHORKA</a>
+        <nav id="nav">
+            <button id="btn-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+                <span id="burger"></span>
+            </button>
+            <ul class="menu" role="menu">
+                <li><a href="categories.html">Categorias</a></li>
+                <li><a href="randomhangman.html">Aleatório</a></li>
+                <li><a href="create.html">Criar</a></li>
+                <li><a href="challenges.html">Desafios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="h1_forca">JOGO DA 'PHORKA'</h1>
+    <p id="slogan">O jogo da forca como você nunca viu!</p>
+
+    <section class="flex">
+        <div>
+            <a class="options" href="categories.html"><img src="photo7.jpg"></a>
+            <a class="options" href="categories.html">Categorias</a>
+        </div>
+        <div>
+            <a class="options" href="randomhangman.html"><img src="avatar.png"></a>
+            <a class="options" href="randomhangman.html">Aleatório</a>
+        </div>
+        <div>
+            <a class="options" href="create.html"><img src="avatar.png"></a>
+            <a class="options" href="create.html">Criar</a>
+        </div>
+        <div>
+            <a class="options" href="challenges.html"><img src="girl.jpg"></a>
+            <a class="options" href="challenges.html">Desafios</a>
+        </div>       
+    </section>
+
+    <script>
+        const btnMobile = document.getElementById('btn-mobile');
+
+        function toggleMenu(event) {
+            if (event.type === 'touchstart') event.preventDefault()
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+            const active = nav.classList.contains('active');
+            event.currentTarget.setAttribute('aria-expanded', active);
+            if (active) {
+                event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+            } else {
+                event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+            }
+        }
+
+        btnMobile.addEventListener('click', toggleMenu);
+        btnMobile.addEventListener('touchstart', toggleMenu);
+
+    </script>
+    <footer><p>Created by Leonardo S. A.</p></footer>
+</body>
+</html>

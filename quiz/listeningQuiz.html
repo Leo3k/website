@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Quiz</title>
+    <style>
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:20px;
+            text-align:center;
+            color:darkblue;
+        }
+        div {
+            text-align: center;
+        }
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:15px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listen to the voice recordings and write down what you can hear.</h1>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="one.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p1">1 - <input type="text" name="one" id="one" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="two.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p2">2 - <input type="text" name="two" id="two" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="three.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p3">3 - <input type="text" name="three" id="three" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="four.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p4">4 - <input type="text" name="four" id="four" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="five.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p5">5 - <input type="text" name="five" id="five" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="six.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p6">6 - <input type="text" name="six" id="six" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="seven.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p7">7 - <input type="text" name="seven" id="seven" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="eight.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p8">8 - <input type="text" name="eight" id="eight" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="nine.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p9">9 - <input type="text" name="nine" id="nine" size="50"> </p>
+    <div class="centerplayer">
+        <audio controls>
+            <source src="ten.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p10">10 - <input type="text" name="ten" id="ten" size="50"> </p>
+    <div class="centerplayer">
+        <button type="submit" onclick="check()">Check</button>
+    </div>
+
+    <script>
+        function check() {
+            one = document.getElementById('one').value;
+            if (one == "I can swim very well.") {
+                document.getElementById('p1').style.color = "green";
+                document.getElementById('one').style.color = "green";
+            }
+            else {
+                document.getElementById('p1').style.color = "red";
+                document.getElementById('one').style.color = "red";
+            }
+
+            two = document.getElementById('two').value;
+            if (two == "My brother speaks five languages.") {
+                document.getElementById('p2').style.color = "green";
+                document.getElementById('two').style.color = "green";
+            }
+            else {
+                document.getElementById('p2').style.color = "red";
+                document.getElementById('two').style.color = "red";
+            }
+
+            three = document.getElementById('three').value;
+            if (three == "She ate an apple for breakfast this morning.") {
+                document.getElementById('p3').style.color = "green";
+                document.getElementById('three').style.color = "green";
+            }
+            else {
+                document.getElementById('p3').style.color = "red";
+                document.getElementById('three').style.color = "red";
+            }
+
+            four = document.getElementById('four').value;
+            if (four == "They didn't study English together last night.") {
+                document.getElementById('p4').style.color = "green";
+                document.getElementById('four').style.color = "green";
+            }
+            else {
+                document.getElementById('p4').style.color = "red";
+                document.getElementById('four').style.color = "red";
+            }
+
+            five = document.getElementById('five').value;
+            if (five == "We can't speak Spanish because we study English.") {
+                document.getElementById('p5').style.color = "green";
+                document.getElementById('five').style.color = "green";
+            }
+            else {
+                document.getElementById('p5').style.color = "red";
+                document.getElementById('five').style.color = "red";
+            }
+
+            six = document.getElementById('six').value;
+            if (six == "I like to watch TV with my family at night.") {
+                document.getElementById('p6').style.color = "green";
+                document.getElementById('six').style.color = "green";
+            }
+            else {
+                document.getElementById('p6').style.color = "red";
+                document.getElementById('six').style.color = "red";
+            }
+
+            seven = document.getElementById('seven').value;
+            if (seven == "He wants to buy a new car next year.") {
+                document.getElementById('p7').style.color = "green";
+                document.getElementById('seven').style.color = "green";
+            }
+            else {
+                document.getElementById('p7').style.color = "red";
+                document.getElementById('seven').style.color = "red";
+            }
+
+            eight = document.getElementById('eight').value;
+            if (eight == "John will travel to Mexico with his friends in November.") {
+                document.getElementById('p8').style.color = "green";
+                document.getElementById('eight').style.color = "green";
+            }
+            else {
+                document.getElementById('p8').style.color = "red";
+                document.getElementById('eight').style.color = "red";
+            }
+
+            nine = document.getElementById('nine').value;
+            if (nine == "She can't drive because she is only sixteen years old.") {
+                document.getElementById('p9').style.color = "green";
+                document.getElementById('nine').style.color = "green";
+            }
+            else {
+                document.getElementById('p9').style.color = "red";
+                document.getElementById('nine').style.color = "red";
+            }
+
+            ten = document.getElementById('ten').value;
+            if (ten == "Jack and Amanda live in a big house in Miami.") {
+                document.getElementById('p10').style.color = "green";
+                document.getElementById('ten').style.color = "green";
+            }
+            else {
+                document.getElementById('p10').style.color = "red";
+                document.getElementById('ten').style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

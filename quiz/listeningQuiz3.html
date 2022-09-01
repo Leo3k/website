@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Quiz</title>
+    <style>
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:20px;
+            text-align:center;
+            color:darkblue;
+        }
+        div {
+            text-align: center;
+        }
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:15px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listen to the voice recordings and write down what you can hear.</h1>    
+    <div class="centerplayer">
+        <p id="p1">1 - <td class="english"><input type="text" name="one" id="one" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('what is your name?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p2">2 - <td class="english"><input type="text" name="two" id="two" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('where are you from?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p3">3 - <td class="english"><input type="text" name="three" id="three" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('where do you live?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p4">4 - <td class="english"><input type="text" name="four" id="four" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('when is your birthday?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p5">5 - <td class="english"><input type="text" name="five" id="five" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('what is your favorite color?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p6">6 - <td class="english"><input type="text" name="six" id="six" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('How much does it cost?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p7">7 - <td class="english"><input type="text" name="seven" id="seven" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('Where does he live?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p8">8 - <td class="english"><input type="text" name="eight" id="eight" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('Can you play tennis?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p9">9 - <td class="english"><input type="text" name="nine" id="nine" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('Do you have a dog?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <p id="p10">10 - <td class="english"><input type="text" name="ten" id="ten" size="40">&nbsp;&nbsp;<a class="myButton" type="submit" value="Ouvir" onclick="english('Where did you sleep?')"><img class="sound" height="25px" width="25px" src="https://img.icons8.com/fluency/48/000000/room-sound.png"/></a></td></p>
+    </div>
+    <div class="centerplayer">
+        <button type="submit" onclick="check()">Check</button>
+    </div>
+
+    <script>
+        function english(msg){
+    
+            responsiveVoice.speak(msg, `US English Male` , {rate:0.8, volume: 1, pitch:0.9});
+    
+        } 
+
+        function check() {
+            one = document.getElementById('one').value;
+            if (one == "What is your name?") {
+                document.getElementById('one').style.color = "green";
+            }
+            else {
+                document.getElementById('one').style.color = "red";
+            }
+
+            two = document.getElementById('two').value;
+            if (two == "Where are you from?") {
+                document.getElementById('two').style.color = "green";
+            }
+            else {
+                document.getElementById('two').style.color = "red";
+            }
+
+            three = document.getElementById('three').value;
+            if (three == "Where do you live?") {
+                document.getElementById('three').style.color = "green";
+            }
+            else {
+                document.getElementById('three').style.color = "red";
+            }
+
+            four = document.getElementById('four').value;
+            if (four == "When is your birthday?") {
+                document.getElementById('four').style.color = "green";
+            }
+            else {
+                document.getElementById('four').style.color = "red";
+            }
+
+            five = document.getElementById('five').value;
+            if (five == "What is your favorite color?") {
+                document.getElementById('five').style.color = "green";
+            }
+            else {
+                document.getElementById('five').style.color = "red";
+            }
+
+            six = document.getElementById('six').value;
+            if (six == "How much does it cost?") {
+                document.getElementById('six').style.color = "green";
+            }
+            else {
+                document.getElementById('six').style.color = "red";
+            }
+
+            seven = document.getElementById('seven').value;
+            if (seven == "Where does he live?") {
+                document.getElementById('seven').style.color = "green";
+            }
+            else {
+                document.getElementById('seven').style.color = "red";
+            }
+
+            eight = document.getElementById('eight').value;
+            if (eight == "Can you play tennis?") {
+                document.getElementById('eight').style.color = "green";
+            }
+            else {
+                document.getElementById('eight').style.color = "red";
+            }
+
+            nine = document.getElementById('nine').value;
+            if (nine == "Do you have a dog?") {
+                document.getElementById('nine').style.color = "green";
+            }
+            else {
+                document.getElementById('nine').style.color = "red";
+            }
+
+            ten = document.getElementById('ten').value;
+            if (ten == "Where did you sleep?") {
+                document.getElementById('ten').style.color = "green";
+            }
+            else {
+                document.getElementById('ten').style.color = "red";
+            }
+        }
+    </script>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=HOp1bC0P"></script>
+</body>
+</html>

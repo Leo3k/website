@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listening Quiz</title>
+    <style>
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:20px;
+            text-align:center;
+            color:darkblue;
+        }
+        div {
+            text-align: center;
+        }
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size:15px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listen to the voice recordings and fill in the blanks.</h1>
+    <h1 style="color:green">John and George</h1>
+    <div class="centerplayer">
+        <img src="friends.jpg" height="200px" width="200px">
+        <br>
+        <audio controls>
+            <source src="johnandgeorge.ogg" type="audio/ogg">
+        </audio>
+    </div>
+    <p id="p1"> John and George decided to <input type="text" name="one" id="one" size="20"> to Argentina.</p>
+    
+    <p id="p2"> So, first they had to <input type="text" name="two" id="two" size="20"> on the airline's website.</p>
+    
+    <p id="p3"> George told John that the <input type="text" name="three" id="three" size="20"> were very expensive.</p>
+    
+    <p id="p4"> And John asked him to <input type="text" name="four" id="four" size="20"> on a different website.</p>
+    
+    <p id="p5"> They spent days trying to <input type="text" name="five" id="five" size="20"> online.</p>
+    
+    <p id="p6"> But unfortunately the <input type="text" name="six" id="six" size="20"> were more expensive than usual. </p>
+    
+    <p id="p7"> So John decided to call a <input type="text" name="seven" id="seven" size="20"> that his friend Adam had recommended to him. </p>
+    
+    <p id="p8">Fortunately, he was able to find some tickets that were <input type="text" name="eight" id="eight" size="20">. </p>
+    
+    <p id="p9">John and George ended up paying <input type="text" name="nine" id="nine" size="20">.</p>
+    
+    <p id="p10">And they were <input type="text" name="ten" id="ten" size="20">. </p>
+    
+    <div class="centerplayer">
+        <button type="submit" onclick="check()">Check</button>
+    </div>
+
+    <script>
+        function check() {
+            one = document.getElementById('one').value;
+            if (one == "go on a trip") {
+                document.getElementById('one').style.color = "green";
+            }
+            else {
+                document.getElementById('one').style.color = "red";
+            }
+
+            two = document.getElementById('two').value;
+            if (two == "book the flights") {
+                document.getElementById('two').style.color = "green";
+            }
+            else {
+                document.getElementById('two').style.color = "red";
+            }
+
+            three = document.getElementById('three').value;
+            if (three == "tickets") {
+                document.getElementById('three').style.color = "green";
+            }
+            else {
+                document.getElementById('three').style.color = "red";
+            }
+
+            four = document.getElementById('four').value;
+            if (four == "search") {
+                document.getElementById('four').style.color = "green";
+            }
+            else {
+                document.getElementById('four').style.color = "red";
+            }
+
+            five = document.getElementById('five').value;
+            if (five == "find a good deal") {
+                document.getElementById('five').style.color = "green";
+            }
+            else {
+                document.getElementById('five').style.color = "red";
+            }
+
+            six = document.getElementById('six').value;
+            if (six == "prices") {
+                document.getElementById('six').style.color = "green";
+            }
+            else {
+                document.getElementById('six').style.color = "red";
+            }
+
+            seven = document.getElementById('seven').value;
+            if (seven == "travel agent") {
+                document.getElementById('seven').style.color = "green";
+            }
+            else {
+                document.getElementById('seven').style.color = "red";
+            }
+
+            eight = document.getElementById('eight').value;
+            if (eight == "on sale") {
+                document.getElementById('eight').style.color = "green";
+            }
+            else {
+                document.getElementById('eight').style.color = "red";
+            }
+
+            nine = document.getElementById('nine').value;
+            if (nine == "half the price") {
+                document.getElementById('nine').style.color = "green";
+            }
+            else {
+                document.getElementById('nine').style.color = "red";
+            }
+
+            ten = document.getElementById('ten').value;
+            if (ten == "extremely happy") {
+                document.getElementById('ten').style.color = "green";
+            }
+            else {
+                document.getElementById('ten').style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
